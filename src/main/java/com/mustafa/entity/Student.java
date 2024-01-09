@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -18,5 +20,9 @@ public class Student {
     Long id;
     String name;
     String surname;
+    @OneToOne(mappedBy = "student",cascade = CascadeType.ALL)
+    Contact contact;
+    @ManyToMany
+    List<Lesson> lessonList;
 
 }

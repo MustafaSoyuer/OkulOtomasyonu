@@ -17,4 +17,6 @@ public class Teacher {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String name;
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "teacher")
+    Lesson lesson;
 }

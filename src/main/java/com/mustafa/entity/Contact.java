@@ -20,5 +20,7 @@ public class Contact {
     String zipcode;
     String phone;
     String parent;
+    @OneToOne
+    Student student;
 
 }
