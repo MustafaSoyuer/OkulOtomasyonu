@@ -19,7 +19,7 @@ public class Lesson {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String name;
-    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "lessonList")
+    @ManyToMany(mappedBy = "lessonList")
     List<Student> studentList;
     @OneToOne
     Teacher teacher;
